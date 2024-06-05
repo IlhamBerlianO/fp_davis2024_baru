@@ -6,7 +6,13 @@ import matplotlib.pyplot as plt
 import pandas as pd
 import os
 
-st.write("DB username:", st.secrets["db_username"])
+user = st.secrets["username"]
+password = st.secrets["password"]
+host = st.secrets["host"]
+port = st.secrets["port"]
+database = st.secrets["database"]
+
+st.write("DB username:", user)
 st.write("DB password:", st.secrets["db_password"])
 st.write("My cool secrets:", st.secrets["my_cool_secrets"]["things_i_like"])
 
