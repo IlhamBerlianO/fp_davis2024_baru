@@ -8,9 +8,9 @@ import os
 
 user = st.secrets["db_username"]
 password = st.secrets["db_password"]
-host = st.secrets["host"]
-port = st.secrets["port"]
-database = st.secrets["database"]
+host = st.secrets["mysql"]["host"]
+port = st.secrets["mysql"]["port"]
+database = st.secrets["mysql"]["database"]
 
 st.write("DB username:", user)
 st.write("DB password:", st.secrets["db_password"])
