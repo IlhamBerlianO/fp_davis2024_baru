@@ -7,7 +7,7 @@ import pandas as pd
 import os
 
 user = st.secrets["db_username"]
-password = st.secrets["password"]
+password = st.secrets["db_password"]
 host = st.secrets["host"]
 port = st.secrets["port"]
 database = st.secrets["database"]
