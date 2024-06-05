@@ -4,12 +4,22 @@ from pathlib import Path
 import base64
 import matplotlib.pyplot as plt
 import pandas as pd
+import os
+
+st.write("DB username:", st.secrets["db_username"])
+st.write("DB password:", st.secrets["db_password"])
+st.write("My cool secrets:", st.secrets["my_cool_secrets"]["things_i_like"])
 
 # Initial page config
 st.set_page_config(
     page_title='Adventurework Dashboard',
     layout="wide",
     initial_sidebar_state="expanded",
+)
+
+st.write(
+    "Has environment variables been set:",
+    os.environ["db_username"] == st.secrets["db_username"],
 )
 
 def main():
