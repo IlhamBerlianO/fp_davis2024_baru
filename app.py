@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 import pandas as pd
 import os
 
-user = st.secrets["username"]
+user = st.secrets["db_username"]
 password = st.secrets["password"]
 host = st.secrets["host"]
 port = st.secrets["port"]
