@@ -12,8 +12,13 @@ host = st.secrets["mysql"]["host"]
 port = st.secrets["mysql"]["port"]
 database = st.secrets["mysql"]["database"]
 
-my_db.connect(**st.secrets.db_credentials)
-
+conn = mysql.connector.connect(
+        host=host,
+        port=int(port),
+        user=user,
+        password=password,
+        db=database
+    )
 
 st.write("DB username:", user)
 st.write("DB password:", password)
