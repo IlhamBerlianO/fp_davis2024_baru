@@ -13,8 +13,7 @@ port = st.secrets["mysql"]["port"]
 database = st.secrets["mysql"]["database"]
 
 st.write("DB username:", user)
-st.write("DB password:", st.secrets["db_password"])
-st.write("My cool secrets:", st.secrets["my_cool_secrets"]["things_i_like"])
+st.write("DB password:", password)
 
 # Initial page config
 st.set_page_config(
