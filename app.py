@@ -6,11 +6,24 @@ import matplotlib.pyplot as plt
 import pandas as pd
 import os
 
-user = st.secrets["db_username"]
-password = st.secrets["db_password"]
-host = st.secrets["mysql"]["host"]
-port = st.secrets["mysql"]["port"]
-database = st.secrets["mysql"]["database"]
+# Buka secrets
+secrets = st.secrets()
+
+# Dapatkan informasi koneksi MySQL
+db_config = secrets["mysql"]
+
+# Ekstrak informasi koneksi
+host = db_config["host"]
+port = db_config["port"]
+user = secrets["db_username"]
+password = secrets["db_password"]
+database = db_config["database"]
+# =================================
+# user = st.secrets["db_username"]
+# password = st.secrets["db_password"]
+# host = st.secrets["mysql"]["host"]
+# port = st.secrets["mysql"]["port"]
+# database = st.secrets["mysql"]["database"]
 
 conn = mysql.connector.connect(
         host=host,
